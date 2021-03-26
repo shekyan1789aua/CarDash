@@ -1,0 +1,49 @@
+{
+	"template" : {
+		"car_types" : [
+			"sedan",
+			"SUV",
+			"hatchback",
+			"racing",
+			"muscle",
+			"coupe",
+			"minivan",
+			"pickup"
+		],
+		"year_of_production" : 0,
+		"year_of_purchase" : 0,
+		"mark" : "",
+		"model" : "",
+		"engine" : "",
+		"power_source" : [
+			"fuel",
+			"electricity",
+			"disel",
+			"gas"
+		],
+		"tank" : 40,
+		"fuel_consumption" : 8,
+		"metric" : [
+			"mile",
+			"km"
+		]
+	},
+	"David's Car" : {
+		"car_type" : "sedan",
+		"year_of_production" : 2018,
+		"year_of_purchase" : 2025,
+		"mark" : "Mercedes",
+		"model" : "E-class",
+		"engine" : "350",
+		"power_source" : "fuel",
+		"tank" : 80,
+		"fuel_consumption" : 8,
+		"metric" : "km",
+		"cylinders" : 6,
+		"avg_speed" : 70,
+		"drive_time" : 120
+	}
+}
+
+
+
