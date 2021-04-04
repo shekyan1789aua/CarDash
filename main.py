@@ -36,7 +36,7 @@ def addCar():
                 "power_source" : [
                     "fuel",
                     "electricity",
-                    "disel",
+                    "diesel",
                     "gas"
                 ],
                 "tank" : 0,
@@ -48,3 +48,58 @@ def addCar():
                 } ,
             }
     car["car_types"] = input("Please insert the car type: ")
+    car["year_of_production"] = getNumericInput("Please insert the year of production:")
+    car["year_of_purchase"] = getNumericInput("Please insert the year of purchase:")
+    car["mark"] = input("Please insert the mark of the car:")
+    car["model"] = input("Please insert the model of the car:")
+    car["volume_of_engine"] = getNumericInput("Please insert the engine volume of the car:")
+    car["power_source"] = input("please insert the power source; fuel, gas, diesel or electricity:")
+    car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
+    car["fuel_consumption"] = getNumericInput("please insert the fuel-consumption per 100km")
+    
+
+
+
+def loadExistingCars():
+    if(os.path.exists("cars.json")):
+        with open('cars.json') as file_data:
+            print(file_data)
+            cars = json.load(file_data)
+            return cars
+    else:
+        return []
+
+def saveToTheFile(cars):
+    f = open("cars.json", "w")
+    f.write(json.dumps(cars, indent = 2))
+    f.close
+
+
+def main():
+
+    cars = []
+    cars = loadExistingCars()
+
+    while(True):
+        insert_mode = input("Do you want to start adding cars? please answer yes or no:")
+        if(insert_mode == "no"):
+            print("Bye")
+            break
+        else:
+            car = addCar()
+            cars.append(car)
+
+
+
+
+    saveToTheFile(cars)
+    displayAllCars(cars)
+
+
+
+main()
+
+
+
+
+
