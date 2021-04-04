@@ -1,9 +1,8 @@
 import json
-import os.path
 
 def displayAllCars(cars):
     print("")
-    for current_car in cars:
+    for current_book in cars:
         for current_key in current_car:
             print(current_key, ":", current_car[current_key])
 
@@ -57,38 +56,35 @@ def addCar():
     car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
     car["fuel_consumption"] = getNumericInput("please insert the fuel-consumption per 100km")
     car["metric"] = input("km or miles")
-    car[""].append()
     return car
 
-    
 def loadExistingCars():
-    if(os.path.exists("cardash.json")):
-        with open('cardash.json') as file_data:
-            print(file_data)
-            cars = json.load(file_data)
-            return cars
-    else:
-        return []
+    with open('cars.json') as file_data:
+        print(file_data)
+        cars = json.load(file_data)
+        return cars
 
 def saveToTheFile(cars):
-    f = open("cardash.json", "w")
+    f = open("cars.json", "w")
     f.write(json.dumps(cars, indent = 2))
     f.close
 
 def main():
 
     cars = []
+
     cars = loadExistingCars()
 
     while(True):
         insert_mode = input("Do you want to start adding cars? please answer yes or no:")
         if(insert_mode == "no"):
-            print("Bye")
+            print("Goodbye")
             break
         else:
-            cars = addCar()
-            car[""].append()
+            car = addCar()
+            cars.append(car)
 
+    print("Saving to the file")
     saveToTheFile(cars)
     displayAllCars(cars)
 
