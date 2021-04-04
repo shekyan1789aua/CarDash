@@ -56,13 +56,11 @@ def addCar():
     car["power_source"] = input("please insert the power source; fuel, gas, diesel or electricity:")
     car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
     car["fuel_consumption"] = getNumericInput("please insert the fuel-consumption per 100km")
+    car["metric"] = input("km or miles")
     
-
-
-
 def loadExistingCars():
-    if(os.path.exists("cars.json")):
-        with open('cars.json') as file_data:
+    if(os.path.exists("cardash.json")):
+        with open('cardash.json') as file_data:
             print(file_data)
             cars = json.load(file_data)
             return cars
@@ -70,10 +68,9 @@ def loadExistingCars():
         return []
 
 def saveToTheFile(cars):
-    f = open("cars.json", "w")
+    f = open("cardash.json", "w")
     f.write(json.dumps(cars, indent = 2))
     f.close
-
 
 def main():
 
@@ -87,15 +84,9 @@ def main():
             break
         else:
             car = addCar()
-            cars.append(car)
-
-
-
 
     saveToTheFile(cars)
     displayAllCars(cars)
-
-
 
 main()
 
