@@ -57,6 +57,9 @@ def addCar():
     car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
     car["fuel_consumption"] = getNumericInput("please insert the fuel-consumption per 100km")
     car["metric"] = input("km or miles")
+    car[""].append()
+    return car
+
     
 def loadExistingCars():
     if(os.path.exists("cardash.json")):
@@ -83,7 +86,8 @@ def main():
             print("Bye")
             break
         else:
-            car = addCar()
+            cars = addCar()
+            car[""].append()
 
     saveToTheFile(cars)
     displayAllCars(cars)
