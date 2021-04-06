@@ -1,0 +1,82 @@
+[
+  {
+    "template": {
+      "car_types": [
+        "sedan",
+        "SUV",
+        "hatchback",
+        "racing",
+        "coupe",
+        "minivan",
+        "pickup"
+      ],
+      "year_of_production": 0,
+      "year_of_purchase": 0,
+      "mark": "",
+      "model": "",
+      "volume_of_engine": 0,
+      "power_source": [
+        "fuel",
+        "electricity",
+        "diesel",
+        "gas"
+      ],
+      "tank": 0,
+      "fuel_consumption": 0,
+      "metric": [
+        "mile",
+        "km"
+      ]
+    },
+    "car_types": "a",
+    "year_of_production": 1,
+    "year_of_purchase": 1,
+    "mark": "a",
+    "model": "a",
+    "volume_of_engine": 1,
+    "power_source": "a",
+    "tank": 1,
+    "fuel_consumption": 1,
+    "metric": "a"
+  },
+  {
+    "template": {
+      "car_types": [
+        "sedan",
+        "SUV",
+        "hatchback",
+        "racing",
+        "coupe",
+        "minivan",
+        "pickup"
+      ],
+      "year_of_production": 0,
+      "year_of_purchase": 0,
+      "mark": "",
+      "model": "",
+      "volume_of_engine": 0,
+      "power_source": [
+        "fuel",
+        "electricity",
+        "diesel",
+        "gas"
+      ],
+      "tank": 0,
+      "fuel_consumption": 0,
+      "metric": [
+        "mile",
+        "km"
+      ]
+    },
+    "car_types": "a",
+    "year_of_production": 1,
+    "year_of_purchase": 1,
+    "mark": "a",
+    "model": "a",
+    "volume_of_engine": 1,
+    "power_source": "a",
+    "tank": 1,
+    "fuel_consumption": 1,
+    "metric": "a"
+  }
+]
