@@ -2,7 +2,7 @@ import json
 
 def displayAllCars(cars):
     print("")
-    for current_book in cars:
+    for current_car in cars:
         for current_key in current_car:
             print(current_key, ":", current_car[current_key])
 
