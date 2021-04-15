@@ -52,10 +52,10 @@ def addCar():
     car["mark"] = input("Please insert the mark of the car:")
     car["model"] = input("Please insert the model of the car:")
     car["volume_of_engine"] = getNumericInput("Please insert the engine volume of the car:")
-    car["power_source"] = input("please insert the power source; fuel, gas, diesel or electricity:")
+    car["power_source"] = input("please insert the power source: fuel, gas, diesel or electricity:")
     car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
-    car["fuel_consumption"] = getNumericInput("please insert the fuel-consumption per 100km")
-    car["metric"] = input("km or miles")
+    car["fuel_consumption"] = getNumericInput("please insert the fuel-consumption per 100km:")
+    car["metric"] = input("km or miles:")
     return car
 
 def loadExistingCars():
@@ -76,7 +76,7 @@ def main():
     cars = loadExistingCars()
 
     while(True):
-        insert_mode = input("Do you want to start adding cars? please answer yes or no:")
+        insert_mode = input("Do you want to start adding cars? Please answer yes or no:")
         if(insert_mode == "no"):
             print("Goodbye")
             break
