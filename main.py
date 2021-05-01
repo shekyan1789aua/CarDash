@@ -1,10 +1,9 @@
 import json
 
 def displayAllCars(cars):
-    print("")
     for current_car in cars:
         for current_key in current_car:
-            print(current_key, ":", current_car[current_key])
+            return current_car[current_key]
 
 def getNumericInput(displayString):
     while(True):
@@ -28,7 +27,7 @@ def addCar():
         car["volume_of_engine"] = getNumericInput("Please insert the engine volume of the car:")
         car["power_source"] = input("please insert the power source: fuel, gas, diesel or electricity:")
         car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
-        car["fuel_consumption"] = getNumericInput("please insert the fuel-consumption per 100km:")
+        car["fuel_consumption"] = getNumericInput("please insert the power source consumption per 100km:")
         car["metric"] = input("km or miles:")
     return car
 
@@ -44,6 +43,7 @@ def saveToTheFile(cars):
     f.close
 
 def main():
+    print("Welcome to the CarDash, we want to help you about your car usage status after you give some important details about it.")
 
     cars = []
 
@@ -52,7 +52,7 @@ def main():
     while(True):
         insert_mode = input("Do you want to start adding cars? Please answer yes or no:")
         if(insert_mode == "no"):
-            print("Goodbye")
+            print("Goodbye, thank you for using the CarDash")
             break
         else:
             car = addCar()
