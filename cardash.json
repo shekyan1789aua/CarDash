@@ -29,18 +29,4 @@
 	]
 
 	}
-},
-{
-	"Davids car" : {
-		"car_types" : "sedan",
-		"year_of_production" : 2018,
-		"year_of_purchase" : 2025,
-		"mark" : "Mercedes-Benz",
-		"model" : " E-class",
-		"volume_of_engine" : 50,
-		"power_source" : "fuel",
-		"tank" : 60,
-		"fuel_consumption" : 15,
-		"metric" : "km"
-	}
-},
+}
