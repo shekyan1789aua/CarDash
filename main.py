@@ -27,8 +27,9 @@ def addCar():
         car["volume_of_engine"] = getNumericInput("Please insert the engine volume of the car:")
         car["power_source"] = input("please insert the power source: fuel, gas, diesel or electricity:")
         car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
-        car["fuel_consumption"] = getNumericInput("please insert the power source consumption per 100km:")
+        car["fuel_consumption"] = getNumericInput("please insert the power source consumption per 1km or mile:")
         car["metric"] = input("km or miles:")
+        car["distance"] = getNumericInput ("please insert how much distance did you drive: ")
     return car
 
 def loadExistingCars():
@@ -52,7 +53,7 @@ def main():
     while(True):
         insert_mode = input("Do you want to start adding cars? Please answer yes or no:")
         if(insert_mode == "no"):
-            print("Goodbye, thank you for using the CarDash")
+            print("Goodbye, thank you for using CarDash")
             break
         else:
             car = addCar()
