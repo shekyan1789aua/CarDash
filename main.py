@@ -29,8 +29,6 @@ def addCar():
         car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
         car["fuel_consumption"] = getNumericInput("please insert the power source consumption per 100km:")
         car["metric"] = input("km or miles:")
-        car["distance"] = getNumericInput ("please insert how much distance did you drive: ")
-        car["fuel_left"] = getNumericInput ("please tell how much fuel is left: ")
         car["distance_left"] = 0
     return car
 
