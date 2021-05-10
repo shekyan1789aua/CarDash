@@ -27,8 +27,6 @@
 		"mile",
 		"km"
 	],
-	"distance" : 0,
-	"fuel_left" : 0,
 	"distance_left" : 0
 
 	}
