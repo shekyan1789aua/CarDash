@@ -1,4 +1,5 @@
 import json
+import math
 
 def displayAllCars(cars):
     for current_car in cars:
@@ -29,12 +30,14 @@ def addCar():
         car["tank"] = getNumericInput("please insert the volume of the tank in liters:")
         car["fuel_consumption"] = getNumericInput("please insert the power source consumption per 100km:")
         car["metric"] = input("km or miles:")
-        car["distance_left"] = 0
+        car["distance_left"] = car["tank"] * 100  / car["fuel_consumption"]
+        print("Your car has the following distance left to drive")
+        print(car["distance_left"])
+        print(car["metric"])
     return car
 
 def loadExistingCars():
     with open('cars.json') as file_data:
-        print(file_data)
         cars = json.load(file_data)
         return cars
 
